@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../menu.css" />
+    <link rel="stylesheet" href="section.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <section class="grand">
+        <section class="parent-section">
+          <section class="sign-up">
+            <div class="parent-sign">
+              <i class="icon-sign fa-solid fa-right-to-bracket"></i>
+              <a href="#" class="sign">Sign Up</a>
+            </div>
+            <div class="parent-log">
+              <i class="icon-log fa-solid fa-user-plus"></i>
+              <a href="#" class="log">Log in</a>
+            </div>
+          </section>
+
+          <section class="logo">
+            <img src="../image/logo.jpg" alt="logo" />
+          </section>
+
+          <section class="search-box">
+            <form
+              action="https://www.google.com/search"
+              target="_blank"
+              method="get"
+              class="search-form"
+            >
+              <input type="text" name="q" placeholder="Search in Google..." />
+              <button type="submit" vlaue="Search Google">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </section>
+          <!-- this section is for creating a menu and i made a separate css file for style this section in max-width:600px -->
+          <section class="menu-wrap">
+            <input type="checkbox" class="toggler" />
+            <section class="hamburger"><div></div></section>
+            <section class="menu">
+              <section>
+                <div class="parent-sign-search">
+                  <!-- this section below is for sign up/in when menu opened -->
+                  <section class="menu-sign">
+                    <section class="sign-up">
+                      <div class="parent-sign">
+                        <i class="icon-sign fa-solid fa-right-to-bracket"></i>
+                        <a href="#" class="sign">Sign Up</a>
+                      </div>
+                      <div class="parent-log">
+                        <i class="icon-log fa-solid fa-user-plus"></i>
+                        <a href="#" class="log">Log in</a>
+                      </div>
+                    </section>
+                  </section>
+                  <!-- this section below is for search box when menu opened  -->
+                  <section class="menu-search search-box">
+                    <form
+                      action="https://www.google.com/search"
+                      target="_blank"
+                      method="get"
+                      class="search-form"
+                    >
+                      <input
+                        type="text"
+                        name="q"
+                        placeholder="Search in Google..."
+                      />
+                      <button type="submit" vlaue="Search Google">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </form>
+                  </section>
+                </div>
+                <div class="empty2"></div>
+                <section class="menu-nav">
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#team">Teams</a></li>
+                    <li><a href="../Goals/goal.html">Goals</a></li>
+                    <li><a href="../Rules/rules.html">Rules</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                  </ul>
+                </section>
+              </section>
+            </section>
+          </section>
+          <!-- until here -->
+        </section>
+        <section class="web-name">
+          <h1>Jasem's Car Company</h1>
+        </section>
+      </section>
+      <nav>
+        <section>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#team">Teams</a></li>
+            <li><a href="../Goals/goal.html">Goals</a></li>
+            <li><a href="../Rules/rules.html">Rules</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <section class="parent-card1">
+        <div class="first2 box2">
+          <img
+            src="https://www.marketing91.com/wp-content/uploads/2020/01/Team-Management.jpg"
+            alt="management-team-image"
+          />
+          <h2>Management Team</h2>
+          <a href="#">more</a>
+        </div>
+        <div class="second2 box2">
+          <img
+            src="data:image/png;base64,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"
+            alt="media-team-image"
+          />
+          <h2>Media Team</h2>
+          <a href="#">more</a>
+        </div>
+        <div class="third2 box2">
+          <img
+            src="https://www.desertskyaviation.com/wp-content/uploads/2021/01/English1-1024x317.png"
+            alt="english-team-image"
+          />
+          <h2>English Team</h2>
+          <a href="#">more</a>
+        </div>
+        <div class="fourth2 box2">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcifhNRBFIsMk4_mt3BbI60cuz3-7ksWC8g&usqp=CAU"
+            alt="teaching-team-image"
+          />
+          <h2>Teaching Team</h2>
+          <a href="#">more</a>
+        </div>
+      </section>
+
+      <section class="table">
+        <div>
+          <table id="team">
+            <thead>
+              <tr>
+                <th>Management</th>
+                <th>Media</th>
+                <th>English</th>
+                <th>Teacher</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jasem</td>
+                <td>Abod</td>
+                <td>hantoosh</td>
+                <td>Abolfazl</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+              <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="contact">
+        <h2 id="contact">Contact us</h2>
+      </section>
+      <section class="icons">
+        <ul>
+          <li style="--clr: #1877f2">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li style="--clr: #ff0000">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li style="--clr: #1da1f2">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li style="--clr: #c32aa3">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li style="--clr: #25d366">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+        </ul>
+      </section>
+      <article>
+        <p>
+          © 2022 by Jasem's Car Compay. Proudly created by
+          <span>Abolfazl Nayudi</span>.
+        </p>
+      </article>
+    </footer>
+  </body>
+</html>

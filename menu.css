@@ -1,0 +1,316 @@
+/* befor starting i should say that this page is for creating a little hamburger menu with css. 
+   if these codes annoyed you please watch the tutorial that i learned how can create this menu 
+   LINK OF THE TUTORIAL: https://youtu.be/DZg6UfS5zYg
+*/
+
+:root {
+  --overlay-color: rgba(233, 233, 233, 0.185);
+  --primary-color: rgba(64, 224, 208, 0.685);
+  --menu-speed: 0.75s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-wrap {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  section.sign-up {
+    display: none;
+  }
+  .search-box {
+    display: none;
+  }
+
+  .web-name {
+    width: 100%;
+  }
+
+  .web-name h1:first-child {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-wrap {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Hamburger line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Top and bottom lines */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* now in those above properties we made three lines(one for the div and two of them for ::after and ::befor )
+    but that two lines for pseudo elements collapsed on top of each other
+     so i made this below property to move the third line under the second line  */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+
+  /* Toggler animate */
+  /* for me: in this selector we say we wanna style the div that inside of hamburger class when checkbox is in the checked state   */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  /* Turn lines into X */
+  .menu-wrap .toggler:checked + .hamburger > div::before,
+  .menu-wrap .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate on hover when checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  /* Show menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > section {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > section > .menu-nav {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  /* for me: from here styling the link will start at the end you should put the search box and sign up/in button in the menu */
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > section {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > section > .menu-nav {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > section > .menu-nav > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    transition: all 0.2s ease;
+    background-color: #f5f5dc;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .menu-wrap .menu > section > .menu-nav > ul > li:hover {
+    background-color: #f5f5dcda;
+    border-radius: 5px;
+
+    transform: scale(1.2);
+  }
+
+  .menu-wrap .menu > section > .menu-nav > ul > li > a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 2em;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search .menu-search.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(128, 128, 128, 0.7);
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-search
+    .search-form
+    input {
+    color: white;
+    font-size: 1em;
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-search
+    .search-form
+    input::placeholder {
+    font-size: 14px;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search .menu-sign .sign-up {
+    display: flex;
+    flex-direction: column;
+    height: 6em;
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-sign
+    .sign-up
+    .parent-sign {
+    transition: all 0.3s ease;
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-sign
+    .sign-up
+    .parent-sign:hover {
+    transform: scale(1.3);
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-sign
+    .sign-up
+    .parent-log {
+    transition: all 0.3s ease;
+  }
+
+  .menu-wrap
+    .menu
+    > section
+    > .parent-sign-search
+    .menu-sign
+    .sign-up
+    .parent-log:hover {
+    transform: scale(1.3);
+  }
+
+  .menu-wrap .menu > section > div.empty2 {
+    height: 200px;
+  }
+}
+
+/**********************************
+*
+*second media query for 490px and less
+*
+************************************/
+
+@media (max-width: 490px) {
+  .menu-wrap .menu > section > .parent-sign-search {
+    flex-direction: column;
+  }
+
+  .menu-wrap .menu > section > .menu-nav {
+    margin-top: -30px;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search .menu-sign .sign-up {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search .menu-sign {
+    order: 2;
+    padding-top: 2em;
+  }
+
+  .menu-wrap .menu > section > .parent-sign-search .menu-search.search-box {
+    background-color: rgb(128, 128, 128, 0.9);
+  }
+}

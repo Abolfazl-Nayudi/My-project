@@ -1,0 +1,98 @@
+/* *********************
+*
+*style the card
+*
+********************** */
+main {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+main .parent-card1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .parent-card1 .box2 {
+  width: 11em;
+  height: 14em;
+  background-color: grey;
+  margin: 30px 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parent-card1 .box2 img {
+  width: 9em;
+  height: 7em;
+  border-radius: 10px;
+}
+
+.parent-card1 .third2 img {
+  background-color: white;
+}
+
+.parent-card1 .box2 h2 {
+  font-size: 20px;
+}
+
+.parent-card1 .box2 a {
+  background-color: rgb(179, 44, 179);
+  color: black;
+  padding: 9px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.parent-card1 .box2 a:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+/* *********************
+*
+*style the table
+*
+********************** */
+.table {
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table div {
+  background-color: grey;
+  height: 200px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.table div table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.table div table td {
+  border: 1px solid black;
+}
+
+.table div table th {
+  width: 200px;
+}
+
+@media (max-width: 400px) {
+  .table div table th,
+  .table div table td {
+    font-size: 13px;
+  }
+}

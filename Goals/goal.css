@@ -1,0 +1,121 @@
+main {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+main .parent-box2 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main .parent-box2 .box2 {
+  width: 11em;
+  height: 14em;
+  background-color: grey;
+  margin: 30px 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parent-box2 .box2 img {
+  width: 9em;
+  height: 7em;
+  border-radius: 10px;
+}
+
+.parent-box2 .box2 a {
+  background-color: rgb(60, 194, 60);
+  color: black;
+  padding: 9px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.parent-box2 .box2 a:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+/* style the description below the cards */
+
+section.description-rule {
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-rule div {
+  width: 60%;
+  height: 250px;
+  background-color: #40e0d0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.description-rule div .rule-left {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.description-rule div .rule-left h3 {
+  width: 100%;
+  text-align: center;
+}
+.description-rule div .description-right {
+  border-left: 2px solid black;
+}
+
+.description-rule div .description-right p {
+  margin: 5px;
+}
+
+.description-rule div .description-right p::first-letter {
+  color: pink;
+  font-size: 20px;
+}
+
+@media (max-width: 830px) {
+  .description-rule div {
+    height: 300px;
+    width: 70%;
+  }
+}
+
+@media (max-width: 720px) {
+  .description-rule div {
+    height: 350px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 430px) {
+  .description-rule div {
+    height: 400px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 360px) {
+  .description-rule div {
+    height: 550px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 300px) {
+  .description-rule div {
+    overflow: auto;
+  }
+}

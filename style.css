@@ -1,0 +1,609 @@
+/* 
+hello my friend(who read this code) 
+i made some comment please pay attention to them, maybe these comments will guide you and save you from losing your mind in this spaghetti code XD
+and guess WHO IS JASEM?
+note: the name start with B and end with N 
+goodluck
+*/
+
+/* this font is for the name of page in header */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+/* the font of copyright footer */
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+section.grand {
+  background-image: url(./image/background-header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+header .parent-section {
+  border: 1px solid black;
+  height: 7rem;
+  width: 100%;
+}
+
+header .parent-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/************************************
+*
+*style the logo 
+*
+*************************************/
+section.logo img {
+  width: 100px;
+}
+
+/************************************
+*
+*style the search-box in header 
+*
+*************************************/
+
+.search-box {
+  width: 250px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: rgb(128, 128, 128, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+form.search-form input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 10rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+form.search-form input::placeholder {
+  color: white;
+}
+
+form.search-form button {
+  background: rgba(83, 83, 83, 0.842);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+}
+
+form.search-form i {
+  color: white;
+}
+
+form.search-form button:hover i {
+  color: black;
+}
+
+/************************************
+*
+*style sing up and logn in button
+*
+*************************************/
+
+section.sign-up {
+  width: 12rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+div.parent-sign {
+  height: 1.5em;
+  width: 5.5em;
+  background-color: rgb(128, 128, 128, 0.7);
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+}
+
+div.parent-sign:hover a.sign,
+div.parent-sign:hover .icon-sign {
+  color: black;
+}
+
+div a.sign {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+div .icon-sign {
+  margin: 0 5px;
+  color: #fff;
+}
+
+div.parent-log {
+  height: 1.5em;
+  width: 5.5em;
+  background-color: rgb(128, 128, 128, 0.7);
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+}
+div a.log {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+div .icon-log {
+  margin: 0 5px;
+  color: #fff;
+}
+
+div.parent-log:hover a.log,
+div.parent-log:hover .icon-log {
+  color: black;
+}
+
+/************************************
+*
+* this is for the name of whole page
+*
+*************************************/
+
+.web-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.web-name h1 {
+  color: red;
+  padding-right: 4rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+
+/************************************
+*
+* style the nav of page
+*
+*************************************/
+
+nav {
+  background-color: rgba(83, 83, 83, 0.842);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  padding: 0;
+}
+
+nav li {
+  flex-grow: 1;
+  height: 100%;
+  /* padding: 10px; */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+nav li:hover {
+  background-color: rgba(136, 136, 136, 0.842);
+}
+
+/************************************
+*
+*start styling the main from here
+*
+*************************************/
+
+/************************************
+*
+*1-style the description and the img beside of it👇
+*
+*************************************/
+
+main .bg-parent {
+  display: flex;
+  height: 403px;
+}
+
+section .car-bg {
+  flex: 1;
+}
+
+.main section .bg-black {
+  width: 3em;
+  height: 403px;
+  flex: 2;
+  background-color: black;
+  position: relative;
+}
+
+.description {
+  background-color: #40e0d0;
+  width: 80%;
+  height: 13em;
+  position: absolute;
+  left: 5em;
+  top: 7em;
+  margin: 0 auto;
+  border-radius: 30px;
+  filter: drop-shadow(0px 0px 30px rgb(121, 118, 118));
+}
+
+img.car-bg {
+  width: 100%;
+}
+
+.description h2 {
+  text-align: center;
+}
+
+.description p {
+  font-family: helvetica;
+  line-height: 1.5rem;
+  padding: 1em;
+}
+
+main .empty {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .description {
+    height: 15em;
+    position: absolute;
+    top: 3em;
+  }
+}
+
+@media (max-width: 1070px) {
+  .description {
+    height: 18em;
+    position: absolute;
+    top: 3em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .description {
+    height: 97%;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  div.bg-black .description {
+    display: none;
+  }
+
+  main .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20em;
+    background-color: black;
+    position: relative;
+  }
+
+  .description {
+    height: 14em;
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  main .empty {
+    height: 23em;
+  }
+
+  section.description {
+    height: 18em;
+  }
+}
+
+@media (max-width: 430px) {
+  main .empty {
+    height: 26em;
+  }
+
+  section.description {
+    height: 23em;
+  }
+}
+
+@media (max-width: 360px) {
+  main .empty {
+    height: 28em;
+  }
+
+  section.description {
+    height: 25em;
+  }
+}
+/************************************
+*
+*2-style the cards👇
+*
+*************************************/
+
+section.card {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card .box {
+  width: 20rem;
+  height: 23em;
+  background-color: grey;
+  margin: 2rem 5px 3rem 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/************************************
+*
+*2-1 first card👇
+*
+*************************************/
+
+.card .first img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+.card .first h2 {
+  font-family: sans-serif;
+}
+
+.card .first a {
+  font-size: 20px;
+  color: black;
+  background-color: aqua;
+  border-radius: 30px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card .first a:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+/************************************
+*
+*2-2 second card👇
+*
+*************************************/
+
+.card .second img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+.card .second h2 {
+  font-family: sans-serif;
+}
+
+.card .second a {
+  font-size: 20px;
+  color: black;
+  background-color: aqua;
+  border-radius: 30px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card .second a:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+/************************************
+*
+*2-3 third card👇
+*
+*************************************/
+
+.card .third img {
+  width: 220px;
+  height: 160px;
+  border-radius: 10px;
+}
+
+.card .third h2 {
+  font-family: sans-serif;
+}
+
+.card .third a {
+  font-size: 20px;
+  color: black;
+  border-radius: 30px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card .first a.purple {
+  background-color: purple;
+}
+
+.card .second a.green {
+  background-color: #3cc23c;
+}
+
+.card .third a.red {
+  background-color: red;
+}
+
+.card .third a:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+}
+
+/************************************
+*
+*style the footer👇
+*
+*************************************/
+:root {
+  --bg: #222;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+}
+
+footer > .contact {
+  width: 100%;
+  height: 20%;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: white;
+  font-size: 20px;
+}
+
+footer > .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60%;
+  background: var(--bg);
+}
+
+footer .icons ul {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+footer .icons ul li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+footer .icons ul li:hover {
+  z-index: 1;
+  transform: scale(0.75);
+}
+
+footer .icons ul li::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px var(--clr), 0 0 0 20px var(--bg), 0 0 0 22px var(--clr);
+  transition: 0.5s;
+}
+
+footer .icons ul li:hover::before {
+  inset: 0;
+}
+
+footer .icons ul li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  transform: rotate(45deg);
+}
+
+footer .icons ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--clr);
+  z-index: 1;
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+footer .icons ul li:hover a {
+  font-size: 3em;
+  filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr))
+    drop-shadow(0 0 60px var(--clr));
+}
+
+footer article {
+  background-color: var(--bg);
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+footer article p {
+  color: white;
+  font-size: 20px;
+}
+
+footer article p span {
+  font-family: "Playball", cursive;
+}
+
+@media (max-width: 620px) {
+  footer {
+    height: 400px;
+  }
+
+  footer .icons ul {
+    justify-content: space-around;
+  }
+
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  footer article p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 365px) {
+  footer {
+    height: 500px;
+  }
+  footer article p {
+    margin-top: 30px;
+  }
+}
