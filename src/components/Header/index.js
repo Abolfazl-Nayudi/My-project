@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import Button from "../Buttons";
 import Nav from "../Nav";
 import "./header.css";
 export default function Header() {

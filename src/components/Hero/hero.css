@@ -1,6 +1,70 @@
 .hero-img {
   width: 100%;
   height: 520px;
+  padding-bottom: 2rem;
   background-image: url("../../pictures/hero.jpg");
   background-size: cover;
+}
+
+.parent-hero-content {
+  width: 98%;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parent-hero-content > .img {
+  background-image: url("../../pictures/4.svg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  width: 250px;
+  height: 230px;
+}
+
+.parent-hero-content > div > h2 {
+  font-size: 36px;
+  color: #f2d697;
+  text-align: center;
+}
+.parent-hero-content > div > h3 {
+  font-size: 36px;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.parent-hero-content > div:nth-child(4) {
+  margin-bottom: 2rem;
+}
+
+.parent-hero-content > div > p {
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+@media (max-width: 530px) {
+  .hero-img {
+    height: 560px;
+  }
+}
+
+@media (max-width: 525px) {
+  .hero-img {
+    height: 600px;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero-img {
+    height: 640px;
+  }
+}
+
+@media (max-width: 343px) {
+  .hero-img {
+    height: 670px;
+  }
 }

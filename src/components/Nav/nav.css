@@ -85,6 +85,7 @@ ul.opened-link {
 
 .opened-link > li {
   padding-bottom: 1.5rem;
+  margin-left: 1rem;
 }
 
 .opened-link > li > a {
